@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scale Generator</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1>Scale Generator</h1>
+
+  <!-- Scale Section -->
+  <div id="scale-section">
+    <h2>Select a Scale</h2>
+    <select id="root-selector">
+      <option value="C">C</option>
+      <option value="C#">C#</option>
+      <option value="D">D</option>
+      <option value="D#">D#</option>
+      <option value="E">E</option>
+      <option value="F">F</option>
+      <option value="F#">F#</option>
+      <option value="G">G</option>
+      <option value="G#">G#</option>
+      <option value="A">A</option>
+      <option value="A#">A#</option>
+      <option value="B">B</option>
+    </select>
+
+    <select id="scale-type-selector">
+      <option value="major">Major Scale</option>
+      <option value="minor">Minor Scale</option>
+      <option value="pentatonic">Pentatonic Scale</option>
+      <option value="blues">Blues Scale</option>
+      <option value="harmonicMinor">Harmonic Minor Scale</option>
+      <option value="dorian">Dorian Scale</option>
+      <option value="mixolydian">Mixolydian Scale</option>
+    </select>
+  </div>
+
+  <div id="scale-display">
+    <!-- Display Scale Notes here -->
+  </div>
+
+  <!-- Piano Section -->
+  <div class="piano-headers">
+    <h3>Playable PIANO</h3>
+    <div class="column volume-slider">
+      <span id="volume">Volume</span>
+      <input type="range" min="0" max="1" value="0.5" step="any">
+    </div>
+  </div>
+
+  <ul class="piano-keys">
+    <li class="key white" data-key="a"><span>C</span></li>
+    <li class="key black" data-key="w"><span>C#</span></li>
+    <li class="key white" data-key="s"><span>D</span></li>
+    <li class="key black" data-key="e"><span>D#</span></li>
+    <li class="key white" data-key="d"><span>E</span></li>
+    <li class="key white" data-key="f"><span>F</span></li>
+    <li class="key black" data-key="t"><span>F#</span></li>
+    <li class="key white" data-key="g"><span>G</span></li>
+    <li class="key black" data-key="y"><span>G#</span></li>
+    <li class="key white" data-key="h"><span>A</span></li>
+    <li class="key black" data-key="u"><span>A#</span></li>
+    <li class="key white" data-key="j"><span>B</span></li>
+    <li class="key white" data-key="k"><span>C</span></li>
+    <li class="key black" data-key="o"><span>C#</span></li>
+    <li class="key white" data-key="l"><span>D</span></li>
+    <li class="key black" data-key="p"><span>D#</span></li>
+    <li class="key white" data-key=";" ><span>E</span></li>
+  </ul>
+
+  <script src="script.js"></script>
+</body>
+</html>
