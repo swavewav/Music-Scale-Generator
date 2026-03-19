@@ -1,0 +1,121 @@
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #E3F2FD;
+  color: #333;
+  padding: 2rem;
+}
+
+h1 { text-align: center; margin-bottom: 4rem; color: #2c3e50; }
+
+#scale-section {
+  text-align: center;
+  background-color: #fff;
+  padding: 3rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+#scale-section h2 { margin-bottom: 10px; color: #34495e; }
+
+select {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 200px;
+  background-color: #fafafa;
+  transition: border-color 0.3s;
+}
+select:focus { border-color: #3498db; outline: none; }
+
+#scale-display {
+  margin-top: 4rem;
+  padding: 2rem;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  color: #424744;
+}
+
+/* Piano */
+h3 { font-size: 1.6rem; padding: 0.5rem; }
+.volume-slider input { accent-color: #fff; }
+
+.piano-headers {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.piano-keys {
+  display: flex;
+  list-style: none;
+  margin-top: 5rem;
+}
+
+.piano-keys .key {
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.piano-keys .black {
+  z-index: 2;
+  width: 44px;
+  height: 140px;
+  margin: 0 -22px;
+  border-radius: 0 0 5px 5px;
+  background: linear-gradient(#333, #000);
+}
+.piano-keys .black.active {
+  box-shadow: inset -5px -10px 10px rgba(255,255,255,0.1);
+  background: linear-gradient(to bottom, #000, #434343);
+}
+
+.piano-keys .white {
+  height: 230px;
+  width: 70px;
+  border-radius: 8px;
+  border: 1px solid #000;
+  background: linear-gradient(#fff 96%, #eee 4%);
+}
+.piano-keys .white.active {
+  box-shadow: inset -5px 5px 20px rgba(0,0,0,0.2);
+  background: linear-gradient(#fff 0%, #eee 100%);
+}
+
+.piano-keys .key span {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  color: #A2A2A2;
+  font-size: 1.13rem;
+  text-align: center;
+}
+
+.piano-keys .black span { bottom: 13px; color: #888888; }
+
+/* Responsive */
+@media screen and (max-width: 815px) {
+  .piano-keys { margin-top: 20px; }
+  .piano-keys .black { height: 100px; width: 40px; margin: 0 -20px; }
+  .piano-keys .white { height: 180px; width: 60px; }
+}
+
+@media screen and (max-width: 615px) {
+  .piano-keys .white { width: 50px; }
+}
