@@ -58,16 +58,16 @@ scaleTypeSelector.addEventListener("change", updateScale);
 // Initial scale display
 updateScale();
 
-// Preload audio
+// Preload audio - create an object to store sounds, assign keys to corresponding sounds
 const audioMap = {};
 keys.forEach(key => {
   audioMap[key.dataset.key] = new Audio(`sounds/${key.dataset.key}.wav`);
 });
 
-// Play note
+// Play note - play the sound for a given piano key
 function playNote(noteKey) {
-  if(!audioMap[noteKey]) return;
-  const audio = audioMap[noteKey];
+  if(!audioMap[noteKey]) return; //If there's no audio key, do nothing
+  const audio = audioMap[noteKey]; //Get the Audio object for this key from audioMap
   audio.currentTime = 0; // Restart if already playing
   audio.volume = volume;
   audio.play();
